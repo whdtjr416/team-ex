@@ -1,0 +1,169 @@
+/* src/main/resources/static/css/style.css */
+
+/* 전역 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 헤더 스타일 */
+.header {
+    background-color: #1a237e;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 영화 목록 스타일 */
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+
+.movie-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.movie-card h3 {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #1a237e;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.movie-info {
+    padding: 1rem;
+}
+
+.movie-info p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+}
+
+.rating span {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+/* 영화 상세 페이지 스타일 */
+.movie-detail {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.movie-detail-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.movie-detail-header {
+    border-bottom: 2px solid #1a237e;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.movie-detail-header h1 {
+    color: #1a237e;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.movie-detail-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.movie-detail-meta {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.movie-detail-meta p {
+    margin: 0.5rem 0;
+}
+
+.movie-detail-overview {
+    line-height: 1.8;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #1a237e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #283593;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .movie-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 1rem;
+    }
+
+    .movie-detail-info {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+}
